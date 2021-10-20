@@ -38,6 +38,15 @@ export default function App() {
 				{ answerText: '7', isCorrect: true },
 			],
 		},
+		{
+			questionText: 'What tool can be used to pentest web apps?',
+			answerOptions: [
+				{ answerText: 'dumpster dive', isCorrect: false },
+				{ answerText: 'Encase', isCorrect: false },
+				{ answerText: 'maltego', isCorrect: false },
+				{ answerText: 'Burp Suite', isCorrect: true },
+			],
+		},
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
