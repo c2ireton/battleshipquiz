@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./App.css";
 
 export default function App() {
 	const questions = [
@@ -52,6 +53,7 @@ export default function App() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
+	const scorePercent = (score / questions.length * 100);		
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -70,7 +72,9 @@ export default function App() {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
-				</div>
+                                        <br/>
+					Which is {scorePercent}%  
+				</div>   
 			) : (
 				<>
 					<div className='question-section'>
