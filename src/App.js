@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./App.css";
 
 export default function App() {
 	const questions = [
@@ -37,6 +38,16 @@ export default function App() {
 			],
 		},
 		{
+
+			questionText: 'What tool can be used to pentest web apps?',
+			answerOptions: [
+				{ answerText: 'dumpster dive', isCorrect: false },
+				{ answerText: 'Encase', isCorrect: false },
+				{ answerText: 'maltego', isCorrect: false },
+				{ answerText: 'Burp Suite', isCorrect: true },
+			],
+		},
+
 			questionText: 'Which design principle is achieved by following the reliability pillar of the AWS Well-Architected Framework?',
 			answerOptions: [
 				{ answerText: 'Vertical scaling', isCorrect: false },
@@ -91,11 +102,13 @@ export default function App() {
 				{ answerText: 'Virtual Private Cloud (VPC)', isCorrect: false },
 			],
 		},	
+
 	];
 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
+	const scorePercent = (score / questions.length * 100);		
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -114,7 +127,9 @@ export default function App() {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
-				</div>
+                                        <br/>
+					Which is {scorePercent}%  
+				</div>   
 			) : (
 				<>
 					<div className='question-section'>
