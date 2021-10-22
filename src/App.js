@@ -22,7 +22,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'True or False: AWS OpsWorks service is used to automate configuration management using Chef and Puppet.',
+			questionText: 'True or False: AWS OpsWorks service is used to automate configuration management using 					Chef and Puppet.',
 			answerOptions: [
 				{ answerText: 'True', isCorrect: true },
 				{ answerText: 'False', isCorrect: false },	
@@ -47,6 +47,7 @@ export default function App() {
 				{ answerText: 'Burp Suite', isCorrect: true },
 			],
 		},
+		{
 
 			questionText: 'Which design principle is achieved by following the reliability pillar of the AWS Well-Architected Framework?',
 			answerOptions: [
