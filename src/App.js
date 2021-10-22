@@ -22,7 +22,7 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'True or False: AWS OpsWorks service is used to automate configuration management using Chef and Puppet.',
+			questionText: 'True or False: AWS OpsWorks service is used to automate configuration management using 					Chef and Puppet.',
 			answerOptions: [
 				{ answerText: 'True', isCorrect: true },
 				{ answerText: 'False', isCorrect: false },	
@@ -47,6 +47,7 @@ export default function App() {
 				{ answerText: 'Burp Suite', isCorrect: true },
 			],
 		},
+		{
 
 			questionText: 'Which design principle is achieved by following the reliability pillar of the AWS Well-Architected Framework?',
 			answerOptions: [
@@ -108,7 +109,7 @@ export default function App() {
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
-	const scorePercent = (score / questions.length * 100);		
+	const scorePercent = Math.floor((score / questions.length) * 100);
 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
@@ -127,9 +128,9 @@ export default function App() {
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
-                                        <br/>
-					Which is {scorePercent}%  
-				</div>   
+					<br/>
+					Which would give you a score of {scorePercent}%
+				</div>
 			) : (
 				<>
 					<div className='question-section'>
