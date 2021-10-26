@@ -22,6 +22,10 @@ body {
 	padding-top: 50px;
 }
 
+.question-count {
+	padding-bottom: 20px;
+}
+
 .answer-section {
 	color: #EC7063;
 	font-size: 25px;
@@ -31,6 +35,7 @@ body {
   	width: 50%;
 	padding-top: 25px;
 }
+
 #submit {
 	
 	color: black;
