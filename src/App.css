@@ -31,3 +31,19 @@ body {
   	width: 50%;
 	padding-top: 25px;
 }
+#submit {
+	
+	color: black;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;	 
+	margin: auto;
+  	width: auto;
+	height: auto;
+	display: flex;
+	margin-top: 50px;
+	display: none;
+}
+#score{
+	display: none;
+}

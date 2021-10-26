@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import "./App.css";
+//import Amplify from 'aws-amplify';
+//import config from './aws-exports';
+//Amplify.configure(config);
 
 export default function App() {
 	const questions = [
@@ -110,7 +113,7 @@ export default function App() {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 	const scorePercent = Math.floor((score / questions.length) * 100);
-
+	//const endQuestions = 11;
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);
@@ -121,6 +124,11 @@ export default function App() {
 			setCurrentQuestion(nextQuestion);
 		} else {
 			setShowScore(true);
+			document.getElementById("submit").style.display= 'block';   
+			var finalScore = 0;
+			finalScore = Math.floor(scorePercent);             
+			document.getElementById("score").value = finalScore;
+		 
 		}
 	};
 	return (
@@ -130,6 +138,7 @@ export default function App() {
 					You scored {score} out of {questions.length}
 					<br/>
 					Which would give you a score of {scorePercent}%
+					
 				</div>
 			) : (
 				<>
@@ -149,3 +158,4 @@ export default function App() {
 		</div>
 	);
 }
+
